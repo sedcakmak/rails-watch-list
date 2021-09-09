@@ -1,0 +1,19 @@
+<div class="p-3">
+<h2><%= @list.name %></h2>
+</div>
+
+<div class="p-3">
+<ul>
+  <% @list.movies.each do |movie| %>
+    <% bookmark = Bookmark.find_by(movie: movie, list: @list) %>
+    <li> <%= movie.title %> | <%= link_to "X", bookmark_path(bookmark), method: :delete %></li>
+  <%end%>
+</ul>
+</div>
+
+<div class="p-5">
+<%= link_to "BACK TO LISTS", lists_path %>
+   <br>
+   <br>
+<%= link_to "ADD A BOOKMARK", new_list_bookmark_path(@list)%>
+</div>
