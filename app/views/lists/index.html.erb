@@ -1,11 +1,17 @@
-<h1>Lists of Movies</h1>
+<div>
+  <h1>Lists of Movies</h1>
+</div>
 
-<ul>
-    <% @lists.each do |list| %>
-    <li>
-    <%= link_to list.name, list_path(list) %>
-    </li>
-    <% end %>
-</ul>
+<div>
+  <ul class="fa-ul">
+      <% @lists.each do |list| %>
+        <li><span class="fa-li"><i class="fas fa-film"></i></span>
+            <%= link_to list.name, list_path(list) %>
+        </li>
+      <%end%>
+  </ul>
+</div>
 
-<%= link_to "ADD A NEW LIST", lists_new_path, class: 'btn btn-primary' %>
+<div>
+  <%= link_to "ADD A NEW LIST", lists_new_path, class: 'btn btn-primary' %>
+</div>

@@ -1,9 +1,9 @@
-<h2>Bookmarks</h2>
+<div class="p-3">
+  <h2>Create a Bookmark</h2>
 
-  <div class="p-5">
   <%= simple_form_for [@list, @bookmark] do |f| %>
       <%= f.input :comment %>
-      <%= f.association :movie %>
+      <%= f.association :movie, collection: Movie.all.order(:title), prompt: "Choose a movie" %>
       <%= f.submit class: 'btn btn-primary' %>
-    <% end %>
-  </div>
+  <% end %>
+</div>

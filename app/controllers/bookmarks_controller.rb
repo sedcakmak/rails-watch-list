@@ -14,9 +14,9 @@ class BookmarksController < ApplicationController
     @bookmark.list = @list
 
     if @bookmark.save
-      redirect_to list_path(@list), notice: 'Bookmark was successfully created!' # list_path(@list) livecode
+      redirect_to list_path(@list), notice: 'Bookmark was successfully created!'
     else
-      render :new # 'new_bookmark'
+      render :new
     end
   end
 
