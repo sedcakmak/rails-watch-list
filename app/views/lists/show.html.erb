@@ -5,7 +5,7 @@
     <% @list.movies.each do |movie| %>
       <% bookmark = Bookmark.find_by(movie: movie, list: @list) %>
       <li >
-     <strong><%= movie.title %></strong> |
+     <strong><%= movie.title %></strong> | <%= movie.poster_url%>
       <%= link_to bookmark_path(bookmark), method: :delete, data: { confirm: "Delete #{movie.title.upcase} from your list?" } do %>
       <i class="far fa-trash-alt"></i>
       <% end %>
