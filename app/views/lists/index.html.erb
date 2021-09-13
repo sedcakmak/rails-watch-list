@@ -1,9 +1,13 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dvpavvw1u/image/upload/v1631278349/mason-kimbarovsky-X_d7m2r70bA-unsplash_xneysi.jpg);">
+  <div class="container">
+    <h1><strong>Movie Lists</strong></h1>
+    <p>Create lists to add your favorite movies!</p>
+    <%= link_to "ADD A NEW LIST", lists_new_path, class: 'btn btn-primary' %>
+  </div>
+</div>
+
 <div>
   <h1>Movie Lists</h1>
-  <%= cl_image_tag("https://res.cloudinary.com/dvpavvw1u/image/upload/v1631262997/ma53yurecje5jw0p8vf9.jpg",
-      width: 400, height: 300, crop: :fill) %>
-      <%= cl_image_tag("https://res.cloudinary.com/dvpavvw1u/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1631263055/vvtajc11mwvrfwkophac.jpg",
-      width: 150, height: 150, crop: :thumb, gravity: :face) %>
 </div>
 
 
@@ -15,8 +19,4 @@
         </li>
       <%end%>
   </ul>
-</div>
-
-<div>
-  <%= link_to "ADD A NEW LIST", lists_new_path, class: 'btn btn-primary' %>
 </div>

@@ -1,8 +1,11 @@
 <div>
   <h2><%= @list.name %></h2>
 
-
+<% if @list.photo.attached? %>
   <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+  <% else %>
+  <p> There is no movies here!</p>
+<% end %>
 
 
 
@@ -15,6 +18,11 @@
       <i class="far fa-trash-alt"></i>
       <% end %>
       <br>
+
+      <% bookmark.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
+
       <em><%= bookmark.comment %></em>
       </li>
     <%end%>
